@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open All URLs</title>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open All URLs</h1>
+    <p>Paste the URLs you want to open in the text box below, separated by commas or new lines.</p>
+    <textarea id="urls" rows="10"></textarea>
+    <button onclick="openURLs()">Open URLs</button>
+    <script>
+      function openURLs() {
+        var urls = document.getElementById("urls").value.split(/[\n,]+/);
+        for (var i = 0; i < urls.length; i++) {
+          window.open(urls[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
